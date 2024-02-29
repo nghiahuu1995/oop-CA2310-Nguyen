@@ -33,3 +33,31 @@ player1.gainXp(6);
 player1.gainXp(9);
 player1.gainXp(13);
 console.log(player1.describe());
+
+// Classes
+class Rectangle {
+  constructor(name, width, height) {
+    this.name = name;
+    this.width = width;
+    this.height = height;
+  }
+
+  area() {
+    return this.height * this.width;
+  }
+  perimeter() {
+    return 2 * (this.width + this.height);
+  }
+  isSquare() {
+    return this.width === this.height;
+  }
+  logArea() {
+    console.log("Rectangle Area: " + this.area());
+  }
+}
+
+const square = new Rectangle("Square", 4, 4);
+console.log(square);
+console.log(square.area());
+console.log(square.isSquare());
+console.log(square.logArea());
